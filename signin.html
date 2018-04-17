@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>login</title>
+  <title>signin</title>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
   <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
   <link href="css/p-common.css" rel="stylesheet" type="text/css" media="all" /> 
@@ -11,27 +11,35 @@
 <body> 
   <!--header--> 
   <div class="mobel-header">
-    <div class="title">我的</div>
+    <div class="title">注册</div>
   </div>  
    <!--main-->
-  <div class="main_content" style="padding-bottom: 3rem;">
+  <div class="main_content signinPage" style="padding-bottom: 3rem;">
     <div class="log">
       <img src="image/icon/logo.png" alt="">
       <form action="">
         <div class="tell txt">
           <label for=""></label>
-          <input type="password" placeholder="手机号">
+          <input type="text" placeholder="请输入手机号或者邮箱">
         </div>
         <div class="psd txt">
           <label for=""></label>
-          <input type="password" placeholder="密码">
+          <input type="password" placeholder="请设置密码"> 
         </div>
-        <input type="submit" value="立即登录">
+        <div class="psd txt">
+          <label for=""></label>
+          <input type="password" placeholder="请再次输入密码"> 
+        </div>
+        <input type="submit" value="立即注册">
+        <p class="protocol">
+          <input type="checkbox" checked="checked">
+          <a href="javascript:;">我已阅读并同意《国典用户注册协议》</a>
+        </p>
       </form>
       <div class="log-bottom">
-				<a class="acount-btn" href="javascript:;">免费注册</a>
-				<a href="javascript:;">忘记密码</a>
-			</div>
+        <a href="javascript:;">已有账号？</a>
+        <a href="login.html" class="color">立即登录</a>
+      </div>
     </div>
   </div>
   <!---->
