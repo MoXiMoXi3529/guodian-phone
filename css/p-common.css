@@ -19,6 +19,16 @@
   visibility: hidden;
   clear: both;
 }
+._shade{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 10;
+  display: none;
+}
 /*header*/
 .mobel-header{
 	width: 100%;
@@ -29,6 +39,7 @@
   padding: 0 10%;
   display: flex;
   position: relative;
+  z-index: 20;
 }
 .mobel-header .title{
   width: 100%;
@@ -38,7 +49,7 @@
   width: 30px;
   height: 100%;
   position: absolute;
-  left: 10px;
+  left: 0;
   top: 0;
   background: url(../image/icon/left.jpg) no-repeat center;
   background-size: 30px;
@@ -51,6 +62,15 @@
 .mobel-header .logo img{
   width: 18%;
 }
+.mobel-header .search{
+  background: url(../image/icon/search.png) no-repeat center;
+  background-size: 80%;
+  width: 44px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 /*footer*/
 .mobel-footer{
   width: 100%;
@@ -58,6 +78,7 @@
   bottom: 0;
   left: 0;
   background-color: #fff;
+  border-top: 1px solid #dbdbdb;
 }
 .mobel-footer ul{
   display: flex;
@@ -343,6 +364,155 @@ footer .footer-grids{
 }
 .goods-img ul li{
   margin-bottom: 10px;
+}
+/*log登录*/
+.log{
+  padding: 40px;
+}
+.log>img{
+  width: 10rem;
+  margin-bottom: 20px;
+}
+.log form .txt{
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+  margin: 20px 0;
+  height: 60px;
+  line-height: 60px;
+}
+.log form .txt label{
+  width: 44px;
+  height: 65px;
+  background: url(../image/icon/user.png) no-repeat center;
+  background-size: 80%;
+}
+.log form input[type="text"], 
+.log form input[type="password"]{
+  flex: 1;
+  padding: 0;
+  border-bottom: none;
+  background: none !important;
+  border-left: 1px solid #dbdbdb;
+  padding-left: 10px;
+  height: 28px;
+  line-height: 28px;
+  margin: 20px 0 10px;
+}
+.log form .psd label{
+  background: url(../image/icon/password.png) no-repeat center;
+  background-size: 80%;
+}
+.log form input[type="submit"]{
+  background-color: #a33a32;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.log-bottom a{
+  color: #bbbbbb;
+}
+/*注册*/
+.signinPage .log a{
+  float: none;
+}
+.signinPage .log-bottom{
+  text-align: left;
+}
+.log .log-bottom a.color{
+  color: #cc5252;
+}
+/*搜索列表listsPage*/
+.listsPage{
+  background-color: #fff;
+  position: relative;
+} 
+.listsPage .tabs {
+  border-top: none !important;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.listsPage .tabs li.active a{
+  color: #f9d27e;
+}
+.listsPage .tabs li.brand{
+  background: url(../image/icon/triangle.png) no-repeat 70% center;
+  padding-right: 10px;
+  background-size: 8px;
+}
+.listsPage .tabs li.brand.active{
+  background: url(../image/icon/triangle_choose.png) no-repeat 70% center;
+  padding-right: 10px;
+  background-size: 8px;
+}
+.listsPage .tabs li.price{
+  background: url(../image/icon/triangle2.png) no-repeat 70% center;
+  padding-right: 10px;
+  background-size: 8px;
+}
+.listsPage .tabs li.price.active{
+  background: url(../image/icon/triangle111.png) no-repeat 70% center;
+  padding-right: 10px;
+  background-size: 8px;
+}
+.listsPage .tabs li{
+  width: 33.333%;
+  background-color: #fff !important;
+  z-index: 20;
+  border-bottom: 1px solid #dbdbdb;
+}
+.listsPage .items li{
+  border-right: 5px solid #fff;
+}
+.listsPage .items li:nth-child(2n){
+  border-left: 5px solid #fff;
+}
+.search-lists {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 0 20px;
+  z-index: 20;
+}
+.search-lists .search-item{
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #dbdbdb;
+  padding-top: 20px;
+}
+.search-lists .search-item .left{
+  width: 50px;
+  text-align: right;
+}
+.search-lists .search-item .right{
+  padding-left: 15px;
+  flex: 1;
+}
+.search-lists .search-item a{
+  display: inline-block;
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+._mechanical ul{
+  display: flex;
+  flex-wrap: wrap;
+} 
+._mechanical ul li{
+  height: 50px;
+  line-height: 50px;
+  width: 33.333%;
+  text-align: center;
+}
+.search-lists .search-content{
+  float: left;
+  display: none;
+  width: 100%;
+}
+.search-lists .search-content.selected{
+  display: block;
 }
 /*适配*/
 @media (max-width: 1100px){
