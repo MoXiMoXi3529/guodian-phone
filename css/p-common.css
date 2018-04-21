@@ -44,6 +44,7 @@
 .mobel-header .title{
   width: 100%;
   font-size: 16px;
+  font-weight: 600;
 }
 .mobel-header .back{
   width: 30px;
@@ -51,8 +52,8 @@
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../image/icon/left.jpg) no-repeat center;
-  background-size: 30px;
+  background: url(../image/icon/left.png) no-repeat center;
+  background-size: 20px;
 }
 .mobel-header .logo{
   flex: 1;
@@ -535,6 +536,181 @@ footer .footer-grids{
     -moz-transition: 0.5s all;
     -o-transition: 0.5s all;
     margin-top: 30px;
+}
+/*收藏collect*/
+.items .coll{
+  width: 20px;
+  height: 20px;
+  background: url(../image/icon/collect.png) no-repeat center center;
+  background-size: 100%;
+  margin: 0 auto;
+}
+.items .coll.active{
+  background: url(../image/icon/collect1.png) no-repeat center center;
+  background-size: 100%;
+}
+/*设置set*/
+/*联系我们contact*/
+.contactPage .contact>.title{
+  text-align: center;
+  margin: 20px 0; 
+}
+.contactPage .contact>.title h3{
+  font-size: 12px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.contactPage .contact>.title h4{
+  font-size: .9rem;
+}
+.contactPage .contact .contact_us{
+  padding: 0 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contactPage .contact .contact_us div{
+  width: 33.333%;
+  text-align: center;
+  border-right: 5px solid #f7f7f9;
+  border-left: 5px solid #f7f7f9;
+  padding: 58px 15px 15px;
+  background: url(../image/icon/address.png) no-repeat center 24%;
+  background-size: 22px;
+  background-color: #fff;
+}
+.contactPage .contact .contact_us p{
+  word-break: break-all;
+  font-size: 12px;
+}
+.contactPage .contact .contact_us .details{
+  transform: scale(0.90);
+  line-height: 15px;
+  color: #999;
+}
+.contactPage .contact .contact_us .phone{
+  background: url(../image/icon/phone.png) no-repeat center 24%;
+  background-size: 22px;
+  background-color: #fff;
+}
+.contactPage .contact .contact_us .email{
+  background: url(../image/icon/email.png) no-repeat center 24%;
+  background-size: 22px;
+  background-color: #fff;
+}
+.contactPage .product_content{
+  background-color: #fff;
+  padding: 5%;
+  font-size: 12px;
+  line-height: 22px;
+  text-indent: 2rem;
+}
+.contactPage .map{
+  padding: 20px 5% 0;
+}
+.contactPage .map ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+.contactPage .map ul li {
+  width: 50%;
+  border: 5px solid #f7f7f9;
+  text-align: center;
+}
+/*设置setPage*/
+.setPage form{
+  padding: 5%;
+}
+.setPage form .formRow{
+  display: flex;
+  flex-wrap: wrap;
+  height: 40px;
+  line-height: 40px;  
+}
+.setPage form .formRow .label{
+  width: 90px;
+  line-height: 40px;
+  color: #4a4a4a;
+}
+.setPage form .formRow .redTip{
+  width: 90px;
+  text-align: right;
+  color: #b5150b;
+  font-size: 12px;
+}
+.setPage form .inputtext{
+  height: 25px;
+  -webkit-flex: 1px;
+  -moz-flex: 1px;
+  -ms-flex: 1px;
+  -o-flex: 1px;
+  flex: 1px;
+}
+.setPage form input{
+  height: 100%;
+  width: 140px;
+  border: 1px solid #dcdcdc;
+}
+.huiTip{
+  font-size: 12px;
+  padding: 0 10px 0 90px;
+  word-break: break-all;
+  width: 100%;
+  color: #686868;
+  font-weight: 600;
+  margin: 15px 0;
+}
+.formRow .inputtext .radio{
+  width: 30px;
+  height: 30px;  
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0; 
+  background: url(../image/icon/radio.png) no-repeat center;
+  background-size: 100%;
+  float: left;
+  margin: 5px 5px 0;  
+}
+.formRow .inputtext .radio:nth-child(2){
+  margin-left: -5px;
+}
+.formRow .inputtext .radioValue{
+  float: left;
+  margin-right: 10px;
+}
+.formRow .inputtext .radio.active{
+  background: url(../image/icon/radio1.png) no-repeat center;
+  background-size: 100%;
+}
+.editPhoneButton{
+  color: #b5150b;
+}
+.formRow.phone .inputtext{
+  display: flex;
+  flex-wrap: wrap;
+}
+.formRow.phone .inputtext input,
+.formRow.phone .inputtext .tel{
+  -webkit-flex: 1px;
+  -moz-flex: 1px;
+  -ms-flex: 1px;
+  -o-flex: 1px;
+  flex: 1px;
+}
+.formRow.phone .inputtext .editPhoneButton{
+  width: 105px;
+  text-align: right;
+}
+.contentBox .cancel, 
+.contentBox #submit{
+  margin: 35px 0 0 12%;
+  height: 35px;
+  font-size: 14px;
+  width: 30%;
+  background-color: #cc5252;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  border-radius: 5px;
 }
 /*适配*/
 @media (max-width: 1100px){

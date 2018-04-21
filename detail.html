@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>details</title>
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/swiper-4.2.2.min.css" rel="stylesheet" type="text/css" media="all" />
+  
+  <link href="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe.css" rel="stylesheet">
+  <link href="http://cdn.bootcss.com/photoswipe/4.1.1/default-skin/default-skin.css" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/p-common.css" rel="stylesheet" type="text/css" media="all" /> 
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body> 
+  <!--header--> 
+  <div class="mobel-header">
+    <div class="back"></div>
+    <div class="logo">
+      <img src="image/icon/logo.png" alt="">
+    </div>
+  </div>  
+   <!--main-->
+  <div class="main_content detailsPage">
+    <!-- banner -->
+    <div class="swiper-container flexslider">
+      <div class="swiper-wrapper my-gallery">
+        <figure class="swiper-slide">
+          <a href="image/list/list2.jpg" data-size="800x1142">
+            <img src="image/list/list2.jpg" alt="">
+          </a>
+        </figure>
+        <figure class="swiper-slide">
+          <a href="image/list/list2.jpg" data-size="800x1142">
+            <img src="image/list/list2.jpg" alt="">
+          </a>
+        </figure>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+      <!-- 如果需要滚动条 -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+    <!--以下内容不要管-->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <!-- 详情 -->
+    <div class="goods-detail">
+      <div class="detail goods-para">
+        <p class="nprice title">￥10,799</p>
+        <p class="oprice">价格<span>￥15,799</span></p>
+        <p class="brand"><span>Gucci/古驰</span>女士钉珠装饰牛皮单肩包女士钉珠装饰牛皮单肩包女士钉珠装饰牛皮单肩包女士钉珠装饰牛皮单肩包</p>
+        <p class="deta">女士钉珠装饰牛皮单肩包女士钉珠装饰牛皮单肩包女士钉珠装饰牛皮单肩包女士钉珠装饰牛皮单肩包</p>
+      </div>
+      <div class="detail goods-info">
+        <p class="title">商品信息</p>
+        <ul>
+          <li><span class="name">商品编号</span>281934</li>
+          <li><span class="name">材质</span>配皮/金属</li>
+          <li><span class="name">开合方式</span>按扣开合</li>
+          <li><span class="name">尺寸</span>21.0×12.3</li>
+        </ul>
+      </div>
+      <div class="detail goods-img">
+        <p class="title">商品详情</p>
+        <ul>
+          <li><img src="image/list/list2.jpg" alt=""></li>
+          <li><img src="image/list/list2.jpg" alt=""></li>
+          <li><img src="image/list/list2.jpg" alt=""></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!---->
+  <footer>
+    <div class="footer-grids">
+      <div class="address">
+        <p><a href="/home/Topic/detail/topic_id/1.html">北京店：北京市朝阳区铭基国际创意公园i2</a></p>
+        <p><a href="/home/Topic/detail/topic_id/1.html">上海店：上海普陀区安远路488-1号 </a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>[  法律声明  ]  -  京ICP备13035513号-1  -  © 2017 WJSMCJS SA</p>
+    </div>
+  </footer>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper-4.2.2.min.js"></script>
+<script src="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe.js"></script>
+<script src="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe-ui-default.js"></script>
+<script src="js/type.js"></script>
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+    autoplay: true,//可选选项，自动滑动
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  })        
+</script>
+</html>
+

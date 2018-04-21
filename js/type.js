@@ -10,12 +10,27 @@
   $('.mobel-footer li').click(function () {
     $(this).addClass('active').siblings().removeClass('active')
   })
-
+  // 搜索列表
   $('._shade').click(function(){
     $(this).hide()
     $('.search-lists .search-content').removeClass('selected')
     $('.listsPage .tabs li').removeClass('active')
   });
+  // 个人设置
+  $('.formRow .inputtext .radio').click(function () {
+      $(this).addClass('active').siblings().removeClass('active')
+  })
+  $('.formRow .editPhoneButton').click(function function_name() {
+      $('#telephone').css({
+        'display': 'block',
+        'marginTop': '8px'
+      }).val($('.tel').text())
+      $('.tel').hide()
+  })
+  // 收藏
+  // $('#collect').click(function () {
+  //     $(this).toggleClass('active')
+  // })
 
 /*图片放大缩小*/
   var initPhotoSwipeFromDOM = function(gallerySelector) {
