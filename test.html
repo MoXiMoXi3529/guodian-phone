@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/swiper-4.2.2.min.css">
+  <link rel="stylesheet" href="css/jquery.artZoom.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<style>
+  /*.swiper-container {
+    width: 600px;
+    height: 300px;
+  }*/
+  img{
+    width: 100%;
+  }
+  .swiper-container{
+    /*margin: 50px;*/
+  }
+</style>
+<body>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="image/list/list1.jpg"><img src="image/list/list1.jpg" alt=""></a>
+        <div class="swiper-slide">
+          <a href="image/list/list2.jpg"><img src="image/list/list2.jpg" alt=""></a>
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+    <!-- 如果需要滚动条 -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/swiper-4.2.2.min.js"></script>
+<script src="js/jquery.artZoom.js"></script>
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+    // direction: 'vertical',
+    loop: true,
+    
+    // 如果需要分页器
+    pagination: {
+      // el: '.swiper-pagination',
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    // 如果需要滚动条
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })        
+  </script>
+</body>
+</html>

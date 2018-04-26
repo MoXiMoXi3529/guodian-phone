@@ -3,16 +3,24 @@
 <head>
   <title>details</title>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="css/swiper-4.2.2.min.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="css/zoom.css" rel="stylesheet" type="text/css" media="all" />
+
+  <link href="css/normalize.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
   
-  <!-- <link href="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe.css" rel="stylesheet"> -->
-  <!-- <link href="http://cdn.bootcss.com/photoswipe/4.1.1/default-skin/default-skin.css" rel="stylesheet"> -->
+  <link href="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe.css" rel="stylesheet">
+  <link href="http://cdn.bootcss.com/photoswipe/4.1.1/default-skin/default-skin.css" rel="stylesheet">
 
   <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
   <link href="css/p-common.css" rel="stylesheet" type="text/css" media="all" /> 
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
+
+<style>
+  .slider-nav{
+    z-index: 10;
+  }
+</style>
+
 <body> 
   <!--header--> 
   <div class="mobel-header">
@@ -24,32 +32,27 @@
    <!--main-->
   <div class="main_content detailsPage">
     <!-- banner -->
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="image/list/list2.jpg" alt="" data-action="zoom">
-        </div>
-        <div class="swiper-slide">
-          <img src="image/list/list2.jpg" alt="" data-action="zoom">
-        </div>
-        <!-- <figure class="swiper-slide">
-          <a href="image/list/list2.jpg" data-size="800x1142">
-            <img src="image/list/list2.jpg" alt="">
-          </a>
+    <div class="slider-container">
+      <div class="slider has-touch my-gallery">
+        <figure>
+          <div class="slider__item">
+            <a href="image/list/banner1.png" data-size="1920x1180">
+              <img src="image/list/banner1.png" alt="" draggable="false">
+            </a>
+          </div>
         </figure>
-        <figure class="swiper-slide">
-          <a href="image/list/list2.jpg" data-size="800x1142">
-            <img src="image/list/list2.jpg" alt="">
-          </a>
-        </figure> -->
+        <figure>
+          <div class="slider__item">
+            <a href="image/list/banner2.png" data-size="1920x1080">
+              <img src="image/list/banner2.png" alt="" draggable="false">
+            </a>
+          </div>
+        </figure>
       </div>
-      <!-- 如果需要分页器 -->
-      <div class="swiper-pagination"></div>
-      <!-- 如果需要滚动条 -->
-      <div class="swiper-scrollbar"></div>
     </div>
+
     <!--以下内容不要管-->
-    <!-- <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="pswp__bg"></div>
         <div class="pswp__scroll-wrap">
             <div class="pswp__container">
@@ -79,7 +82,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <!---->
     <!-- 详情 -->
     <div class="goods-detail">
@@ -121,20 +124,19 @@
     </div>
   </footer>
 </body>
+
 <script src="js/jquery.min.js"></script>
-<script src="js/swiper-4.2.2.min.js"></script>
-<!-- <script src="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe.js"></script> -->
-<!-- <script src="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe-ui-default.js"></script> -->
-<script src="js/zoom.min.js"></script>
+<script src="js/slider.js"></script>
+<script src="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe.js"></script>
+<script src="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe-ui-default.js"></script>
 <script src="js/type.js"></script>
-<script>        
-  var mySwiper = new Swiper ('.swiper-container', {
-    autoplay: true,//可选选项，自动滑动
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  })        
+
+<script type="text/javascript">
+  $(".slider-container").ikSlider({
+    speed: 500
+  });
+  $(".slider-container").on('changeSlide.ikSlider', function (evt) { console.log(evt.currentSlide); });
 </script>
+
 </html>
 

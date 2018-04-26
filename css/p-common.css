@@ -712,6 +712,9 @@ footer .footer-grids{
   display: inline-block;
   border-radius: 5px;
 }
+.swiper-slide{
+  margin: 50px;
+}
 /*适配*/
 @media (max-width: 1100px){
 	/*header*/
