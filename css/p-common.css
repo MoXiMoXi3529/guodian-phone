@@ -279,7 +279,10 @@ footer .footer-grids{
   border-bottom: 1px solid #e6dfdf;
   text-align: center;
 }
-.classifyPage .tabs li.watch,
+.classifyPage .tabs li {
+  width: 20%;
+}
+/*.classifyPage .tabs li.watch,
 .classifyPage .tabs li.shoes,
 .classifyPage .tabs li.ornament{
   flex: 1;
@@ -287,7 +290,7 @@ footer .footer-grids{
 .classifyPage .tabs li.catch,
 .classifyPage .tabs li.jewellery{
   width: 21%;
-}
+}*/
 .classifyPage .tabs li.active a{
   color: #f9d27e;
 }
@@ -454,6 +457,11 @@ footer .footer-grids{
 }
 .listsPage .tabs li.price.active{
   background: url(../image/icon/triangle111.png) no-repeat 70% center;
+  padding-right: 10px;
+  background-size: 8px;
+}
+.listsPage .tabs li.price.curren{
+  background: url(../image/icon/triangleDown.png) no-repeat 70% center;
   padding-right: 10px;
   background-size: 8px;
 }
