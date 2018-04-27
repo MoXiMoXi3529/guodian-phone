@@ -201,6 +201,17 @@ a:hover,a:active,a:focus {
   margin: 50px 65px 20px 220px;
   border-radius: 5%;
   font-size: 20px;
+}
+.setForm .cancel{
+  width: 150px;
+  height: 55px;
+  background: #cc5252;
+  text-align: center;
+  color: #FFF;
+  font-size: 28px;
+  margin: 50px 65px 20px 220px;
+  border-radius: 5%;
+  font-size: 20px;
 } 
 @media (max-width: 640px){
   .contentBox{

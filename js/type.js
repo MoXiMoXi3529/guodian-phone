@@ -23,7 +23,7 @@
   })
   // 个人设置
   $('.formRow .inputtext .radio').click(function () {
-      $(this).addClass('active').siblings().removeClass('active')
+      $(this).addClass('current').siblings().removeClass('current')
   })
   $('.formRow .editPhoneButton').click(function function_name() {
       $('#telephone').css({
