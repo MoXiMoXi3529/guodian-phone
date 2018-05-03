@@ -3,9 +3,9 @@
 <head>
   <title>details</title>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="css/swiper-4.2.2.min.css" rel="stylesheet" type="text/css" media="all" />
 
   <link href="css/normalize.css" rel="stylesheet" type="text/css" media="all" />
-  <link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
   
   <link href="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe.css" rel="stylesheet">
   <link href="http://cdn.bootcss.com/photoswipe/4.1.1/default-skin/default-skin.css" rel="stylesheet">
@@ -18,6 +18,9 @@
 <style>
   .slider-nav{
     z-index: 10;
+  }
+  .pswp__counter{
+    display: none;
   }
 </style>
 
@@ -32,7 +35,41 @@
    <!--main-->
   <div class="main_content detailsPage">
     <!-- banner -->
-    <div class="slider-container">
+    <div class="swiper-container">
+      <div class="swiper-wrapper my-gallery">
+        <figure class="swiper-slide">
+          <div>
+            <a href="image/pics/banner1.jpg" data-size="414x414">
+              <img src="image/pics/banner1.jpg" alt="">
+            </a>
+          </div>
+        </figure>
+        <figure class="swiper-slide">
+          <div>
+            <a href="image/pics/banner2.jpg" data-size="414x414">
+              <img src="image/pics/banner2.jpg" alt="">
+            </a>
+          </div>
+        </figure>
+        <figure class="swiper-slide">
+          <div>
+            <a href="image/list/list1.jpg" data-size="800x800">
+              <img src="image/list/list1.jpg" alt="">
+            </a>
+          </div>
+        </figure>
+        <figure class="swiper-slide">
+          <div>
+            <a href="image/list/list2.jpg" data-size="800x800">
+              <img src="image/list/list2.jpg" alt="">
+            </a>
+          </div>
+        </figure>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- <div class="slider-container">
       <div class="slider has-touch my-gallery">
         <figure>
           <div class="slider__item">
@@ -49,7 +86,7 @@
           </div>
         </figure>
       </div>
-    </div>
+    </div> -->
 
     <!--以下内容不要管-->
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -103,11 +140,27 @@
       </div>
       <div class="detail goods-img">
         <p class="title">商品详情</p>
-        <ul>
-          <li><img src="image/list/list2.jpg" alt=""></li>
-          <li><img src="image/list/list2.jpg" alt=""></li>
-          <li><img src="image/list/list2.jpg" alt=""></li>
+        <ul class="my-gallery clearfix">
+          <figure>
+            <div class="slider__item">
+              <a href="image/list/banner1.png" data-size="1920x1180">
+                <img src="image/list/banner1.png" alt="" draggable="false">
+              </a>
+            </div>
+          </figure>
+          <figure>
+            <div class="slider__item">
+              <a href="image/list/banner2.png" data-size="1920x1080">
+                <img src="image/list/banner2.png" alt="" draggable="false">
+              </a>
+            </div>
+          </figure>
         </ul>
+        <!-- <ul>
+          <li><img src="image/list/list2.jpg" alt=""></li>
+          <li><img src="image/list/list2.jpg" alt=""></li>
+          <li><img src="image/list/list2.jpg" alt=""></li>
+        </ul> -->
       </div>
     </div>
   </div>
@@ -126,16 +179,19 @@
 </body>
 
 <script src="js/jquery.min.js"></script>
-<script src="js/slider.js"></script>
+<script src="js/swiper-4.2.2.min.js"></script>
 <script src="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe.js"></script>
 <script src="http://cdn.bootcss.com/photoswipe/4.1.1/photoswipe-ui-default.js"></script>
 <script src="js/type.js"></script>
 
-<script type="text/javascript">
-  $(".slider-container").ikSlider({
-    speed: 500
-  });
-  $(".slider-container").on('changeSlide.ikSlider', function (evt) { console.log(evt.currentSlide); });
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+    autoplay: true,//可选选项，自动滑动
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  })        
 </script>
 
 </html>
